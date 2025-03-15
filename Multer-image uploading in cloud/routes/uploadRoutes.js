@@ -1,5 +1,5 @@
 import express from "express";
-import upload from "../middlewares/uploadMiddleware.js";
+import upload from "../middleware/uploadMiddleware.js";
 import cloudinary from "../config/cloudinary.js";
 import fs from "fs";
 
@@ -18,7 +18,6 @@ router.post("/cloudinary", upload.single("image"), async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ message: "No file uploaded" });
     }
-
     // Upload file to Cloudinary
     const result = await cloudinary.uploader.upload(req.file.path, {
       folder: "uploads",
