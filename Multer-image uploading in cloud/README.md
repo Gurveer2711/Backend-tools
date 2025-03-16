@@ -12,7 +12,7 @@ A collection of backend utilities and tools for web development. This project in
 
 2. Install the dependencies:
    ```sh
-   npm install
+   npm install cloudinary fs multer dotenv
    ```
 
 3. Start the server:
